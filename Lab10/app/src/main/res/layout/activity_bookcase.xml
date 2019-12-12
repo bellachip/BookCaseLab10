@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".BookCaseActivity">
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="#bbc0c6"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="@+id/etSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etSearch"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:autofillHints="Search books"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/container1"
+        android:layout_width="380dp"
+        android:layout_height="549dp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clPlayback"
+        app:layout_constraintVertical_bias="0.838">
+
+    </FrameLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clPlayback"
+        android:layout_width="388dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="33dp"
+
+        android:background="#BFFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch">
+
+        <SeekBar
+            android:id="@+id/sbNowPlaying"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:maxHeight="2dip"
+            android:minHeight="2dip"
+            android:progressDrawable="@android:color/black"
+            android:thumbTint="#A50000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ibtnPlayPause"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNowPlaying" />
+
+        <TextView
+            android:id="@+id/tvNowPlaying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/sbNowPlaying"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/ibtnStop"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:background=""-->
+        <!--            android:scaleType="fitCenter"-->
+        <!--            android:text = "stop"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/ibtnPlayPause"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/ibtnPlayPause"-->
+        <!--            />-->
+
+        <Button
+            android:id="@+id/ibtnStop"
+            android:layout_width="49dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="#bbc0c6"
+            android:text="Stop"
+            app:layout_constraintBottom_toBottomOf="@+id/ibtnPlayPause"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ibtnPlayPause"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/ibtnPlayPause"
+            android:layout_width="49dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="#bbc0c6"
+            android:text="Pause"
+
+            app:layout_constraintBottom_toBottomOf="@+id/sbNowPlaying"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ibtnStop"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/ibtnPlayPause"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:adjustViewBounds="true"-->
+        <!--            android:background="#00FFFFFF"-->
+        <!--            android:scaleType="fitCenter"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/sbNowPlaying"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/ibtnStop"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:srcCompat="@drawable/btnplay" />-->
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
